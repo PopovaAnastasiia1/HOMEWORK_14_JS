@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+
+:root{
+  --background-image:url(../image/background.jpg);
+  --background-header : rgba(0, 0, 0, 0.4);
+  --background-color-change-btn :#3cb878;
+  --background-color-sign: #3cb878;
+  --color-login :#3cb878;
+  --color-login-hover:  #01813f;
+  --color-agree:#3cb878;
+  --color-agree-hover:#01813f;
+  --background-color-form-btn :#3cb878;
+  --background-color-form-btn-hover :#01813f;
+}
+
+:root[theme='winter'] {
+  --background-image:url(../image/backqround-winter.jpg);
+  --background-header : rgba(1, 49, 63, 0.4);
+  --background-color-change-btn :#5380ab;
+  --background-color-sign: #5380ab;
+  --color-login :#5380ab;
+  --color-login-hover: #234e77;
+  --color-agree:#5380ab;
+  --color-agree-hover:#234e77;
+  --background-color-form-btn :#5380ab;
+  --background-color-form-btn-hover :#234e77;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  height: 100vh;
+  width: 100%;
+  background-image: var(--background-image);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header {
+  width: 100%;
+  height: 58px;
+  background: var(--background-header);
+  margin-bottom: 54px;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+.header_box {
+  padding: 17px 79px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header_logo {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.header_logo:hover {
+  color: #3cb878;
+  transition: 0.3s;
+}
+
+.header_right {
+  display: flex;
+}
+
+.change_theme {
+  height: 22px;
+  margin-right: 20px;
+  background-color: var(--background-color-change-btn);
+  border-radius: 3px;
+  border: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.header_icons {
+  height: 19px;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+}
+
+.header_svg {
+  margin-right: 25px;
+}
+
+.header_svg path:hover {
+  fill: #3cb878;
+  transition: 0.3s;
+}
+
+.header_text {
+  margin-left: 27px;
+  display: flex;
+  align-items: center;
+}
+
+.header_text,
+.header_text a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #ffffff;
+}
+
+.header_text a:hover {
+  color: #3cb878;
+  transition: 0.3s;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  width: 444px;
+  height: 584px;
+  background-color: #ffffff;
+  margin-bottom: 74px;
+}
+
+.form_box {
+  margin: 31px 60px 38px;
+}
+
+.form_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sign-up_form {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: #434343;
+  margin-left: -16px;
+}
+
+.sign-up_form::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-color: var(--background-color-sign);
+  display: inline-block;
+  position: relative;
+  right: 44px;
+}
+
+.log-in_form {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: var(--color-login);
+}
+
+.log-in_form:hover {
+  text-decoration-line: underline;
+  color:var(--color-login-hover);
+  transition: 0.3s;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 34px;
+}
+
+.facebook_btn,
+.google_btn {
+  width: 157px;
+  height: 45px;
+  border-radius: 3px;
+  border: none;
+  background-color: #3cb878;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  cursor: pointer;
+}
+
+.facebook_btn {
+  background-color: #305db8;
+  padding-left: 11px;
+  padding-right: 22px;
+}
+
+.facebook_btn:hover {
+  background-color: #022263;
+  transition: 0.3s;
+}
+
+.google_btn {
+  background-color: #df4a32;
+  padding-left: 12px;
+  padding-right: 27px;
+}
+
+.google_btn:hover {
+  background-color: #ab1f09;
+  transition: 0.3s;
+}
+
+.facebook_btn p,
+.google_btn p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.facebook_btn p::before {
+  content: "";
+  width: 1px;
+  height: 28px;
+  opacity: 1;
+  display: inline-block;
+  position: relative;
+  right: 18px;
+  background-color: hwb(221 4% 82% / 0.1);
+}
+
+.google_btn p::before {
+  content: "";
+  width: 1px;
+  height: 28px;
+  opacity: 1;
+  display: inline-block;
+  position: relative;
+  right: 30px;
+  background-color: hwb(221 4% 82% / 0.1);
+}
+
+.form_text-or {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #848484;
+  text-align: center;
+}
+
+.form_text-or::after,
+.form_text-or::before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  width: 152px;
+  height: 0px;
+  border: 1px solid #f2f2f2;
+  bottom: 3px;
+}
+
+.form_text-or::before {
+  right: 5px;
+}
+
+.form_text-or::after {
+  left: 5px;
+}
+
+.user_inf_input {
+  width: 324px;
+  height: 44px;
+  border: 1px solid #f2f2f2;
+  border-radius: 4px;
+  margin-top: 13px;
+  color: #434343;
+  padding-left: 20px;
+}
+
+.user_inf_input::placeholder {
+  color: #bebebe;
+  padding-left: 20px;
+}
+
+.user_inf_input:focus {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.21);
+  outline: none;
+  color: #434343;
+}
+
+.agree_box {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  display: inline-block;
+  margin-top: 12px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label span {
+  border: 1px solid #f2f2f2;
+  font-size: 23px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  text-align: center;
+  vertical-align: middle;
+}
+input[type="checkbox"]:checked + label span::after {
+  content: "\2713";
+  color: #01813f;
+}
+
+.agree_terms {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #434343;
+}
+
+.agree_terms a {
+  text-decoration: none;
+  color: var(--color-agree);
+}
+
+.agree_terms a:hover {
+  text-decoration: underline;
+  color: var(--color-agree-hover);
+  transition: 0.3s;
+}
+
+.form_btn {
+  width: 324px;
+  height: 46px;
+  margin-top: 20px;
+  margin-bottom: 38px;
+  background: var(--background-color-form-btn);
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  border: none;
+}
+
+.form_btn:hover {
+  background-color: var(--background-color-form-btn-hover);
+  cursor: pointer;
+  transition: 0.3s;
+}
